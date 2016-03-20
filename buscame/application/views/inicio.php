@@ -1,0 +1,1 @@
+AKI va toda la parte del inicio 

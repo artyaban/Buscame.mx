@@ -36,11 +36,11 @@ $this->load->helper('url');
 					
 				<!-- Header -->
 					<header id="header">
-						<h1><a style='font-size: 24px;'href="#">Buscame MX</a></h1>
+						<h3><a style='font-size: 70%; margin:20px;'href="#">Buscame MX</a></h3>
 						<nav class="links">
 							<ul>
-								<li><a style='font-size: 16px;' href="#">INICIO</a></li>
-								<li><a style='font-size: 16px;'href="#">NOSTROS</a></li>
+								<li><a style='font-size: 16px;' href="">INICIO</a></li>
+								<li><a style='font-size: 16px;'href="#">NOSOTROS</a></li>
 								<li><a style='font-size: 16px;'href="#">BUSCAME</a></li>
 								<li><a style='font-size: 16px;'href="#">VAMONOS DE FERIA...</a></li>
 								<li><a style='font-size: 16px;'href="#">CONTACTANOS</a></li>
@@ -60,5 +60,6 @@ $this->load->helper('url');
 							</ul>
 						</nav>
 					</header>
+
 
 
