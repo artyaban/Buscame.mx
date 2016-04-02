@@ -12,7 +12,7 @@ class Buscame extends CI_Controller {
 	public function hola()
 	{
 		$this->load->view('header');
-		$this->load->view('nosotros');
+		$this->load->view('buscame');
 		$this->load->view('footer');
 
 

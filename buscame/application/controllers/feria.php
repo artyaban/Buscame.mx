@@ -12,7 +12,7 @@ class Feria extends CI_Controller {
 	public function hola()
 	{
 		$this->load->view('header');
-		$this->load->view('nosotros');
+		$this->load->view('feria');
 		$this->load->view('footer');
 
 

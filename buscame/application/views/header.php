@@ -42,9 +42,10 @@ $this->load->helper('url');
 						<nav class="links">
 							<ul>
 								<li><a style='font-size: 16px;' href="<?echo base_url();?>">INICIO</a></li>
-								<li><a style='font-size: 16px;'href="<?echo base_url(); ?>index.php/nosotros">NOSOTROS</a></li>
+								
 								<li><a style='font-size: 16px;'href="<?echo base_url(); ?>index.php/buscame">BUSCAME</a></li>
 								<li><a style='font-size: 16px;'href="<?echo base_url(); ?>index.php/feria">VAMONOS DE FERIA...</a></li>
+								<li><a style='font-size: 16px;'href="<?echo base_url(); ?>index.php/nosotros">NOSOTROS</a></li>
 								<li><a style='font-size: 16px;'href="<?echo base_url(); ?>index.php/contactanos">CONTACTANOS</a></li>
 							</ul>
 						</nav>
