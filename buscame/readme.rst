@@ -5,7 +5,7 @@ BUSCAME.MX
 Buscame.mx esta desarrollado en Codeigniter por la empresa WebappMX
 
 
-<https://webappmx.com>
+<http://webappmx.com>
 
 *******************
 Release Information
