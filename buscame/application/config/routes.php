@@ -54,7 +54,8 @@ $route['nosotros'] ='nosotros/hola';
 $route['feria'] ='feria/hola';
 $route['buscame'] ='buscame/hola';
 $route['contactanos'] ='contactanos/hola';
-$route['404_override'] = '';
+$route['admin'] ='Admin/index';
+$route['404_override'] = 'error404';
 $route['translate_uri_dashes'] = FALSE;
 
 

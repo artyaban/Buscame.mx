@@ -2,63 +2,44 @@
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+ <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+ 
  <style>
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
-      width: 70%;
+      width: 100%;
       margin: auto;
   }
-  </style>
-<?php 
-
-//tomar las variables para los cuadros de empresa.
-$empresa1= 'WebappMX';
-$empresa2= 'fedex';
-$empresa3= 'nissan';
-$empresa4= 'exell';
-$empresa5= 'nike';
-$empresa6= 'hp';
-$empresa7= 'coca_cola';
-$empresa8= 'burger_king';
-$oferta1='WebappMX';
-$oferta2='WebappMX';
-$oferta3='WebappMX';
-$oferta4='WebappMX';
-$oferta5='WebappMX';
-$oferta6='WebappMX';
-?>
+ </style>
 
 
-<div class='col-xs-2'>
-<? $i=1; while($i<=3)
-{
-$empresa='empresa'.$i; 
-?>
+
+<div class='col-md-2' >
+<?php foreach ($query as $key => $empresa) {?>
+
+
 
 
 <div class="panel panel-default">
               <div class="panel-body">
-                <img style=" height: 10%;" src="http://localhost/Buscame.mx/imagenes/<?echo $$empresa;?>.jpg" class="img-responsive center-block" >
+              <img style=" height: 10%;" src="/logos/<?echo $empresa->logo;?>" class="img-responsive center-block" >
               </div>
-              <div class="panel-footer" class="center-block" style="text-align:center; background-color: #">
-                <h4> <?php echo $$empresa; ?> </h4>
-             
-              
-                 <a href='http://localhost/Buscame.mx/buscame/controllers/<?echo $$empresa;?>.php' method='post'><?php 
-              echo 'ver detalles de '.$$empresa; ?> &nbsp;&nbsp;</a>
+              <div class="panel-footer" class="center-block" style="text-align:center; height: 16%; background-color: #0C4571">
+                <h5 class='col-md-12'style='color:#FFF;'><?php echo $empresa->nombre_establecimiento; ?> </h5>
+             <form action='index.php/detalles' method='post'> 
+            <h3 style='height: 20%; width: 100%;'> <button name='valor' class="btn btn-link" type='submit' value='<?echo $empresa->nombre_establecimiento;?>' style="border:solid 0px;  width: 90%; color:#fff !important;"> detalles</h3></button>
+             </form>
               </div>
 </div>
-<? $i++;}?></div>
 
 
-
-
-<div class='col-xs-8'>
+<?php }?>
+</div>
+<div class='col-md-8'>
 
 	
-				<div id="myCarousel" class="carousel slide" data-ride="carousel" style="background-color: #fff;">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 100%; ">
 				  <!-- Indicators -->
 				  <ol class="carousel-indicators">
 					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -73,16 +54,16 @@ $empresa='empresa'.$i;
 					
 
 					<div class="item active">
-					  <center><img style='height:29%;'src="http://localhost/Buscame.mx/imagenes/<?echo $empresa1;?>.jpg" alt="Búscame.mx" class="img-responsive"></center>
+					  <center><img style='height:29%;width: 100%;'src="/logos/banner1.jpg" alt="Búscame.mx" class="img-responsive"></center>
 					</div>
 
 					<div class="item">
-					  <center><img style='height:29%;'src="http://localhost/Buscame.mx/imagenes/<?echo $empresa2;?>.jpg" alt="Búscame.mx" class="img-responsive"></center>
+					  <center><img style='height:29%;width: 100%;'src="/logos/banner2.jpg" alt="Búscame.mx" class="img-responsive"></center>
 
 					</div>
 
 					<div class="item">
-					  <center><img style='height:29%;'src="http://localhost/Buscame.mx/imagenes/<?echo $empresa3;?>.jpg"alt="Búscame.mx" class="img-responsive"></center>
+					  <center><img style='height:29%;width: 100%;'src="/logos/banner3.jpg"alt="Búscame.mx" class="img-responsive"></center>
 					 
 					</div>
 
@@ -104,52 +85,102 @@ $empresa='empresa'.$i;
 				
 			</div>
 
-<p>&nbsp;</p>
+<br>
 
-<? //ofertas.......
-$j=1; while($j<=6)
-{
-$empresa='oferta'.$j; 
-?>
-<div class='col-xs-4'>
+
+<div class='col-md-4'>
+
+<?php foreach ($query2 as $key => $empresa) {?>
+
+
+
+
 
 <div class="panel panel-default">
               <div class="panel-body">
-                <img style=" height: 10%;" src="http://localhost/Buscame.mx/imagenes/<?echo $$empresa;?>.jpg" class="img-responsive center-block" >
+              <img style=" height: 10%;" src="/logos/<?echo $empresa->logo;?>" class="img-responsive center-block" >
               </div>
-              <div class="panel-footer" class="center-block" style="text-align:center; background-color: #">
-                <h4> <?php echo 'OFERTA !!' ?> </h4>
-             
-              
-                 <a href='http://localhost/Buscame.mx/buscame/controllers/<?echo $$empresa;?>.php' method='post'><?php 
-              echo 'Ver detalles '.$$empresa; ?> &nbsp;&nbsp;</a>
+              <div class="panel-footer" class="center-block" style="text-align:center; height: 16%; background-color: #0C4571">
+                <h5 class='col-md-12'style='color:#FFF;'><?php echo $empresa->nombre_establecimiento; ?> </h5>
+             <form action='index.php/detalles' method='post'> 
+            <h4 style='height: 20%; width: 100%;'> <button  name='valor' class="btn btn-link" type='submit' value='<?echo $empresa->nombre_establecimiento;?>' style="border:solid 0px; color:#fff !important; "> detalles</h4></button>
+             </form>
               </div>
-</div></div>
-<? $j++;
-}?>
-
 </div>
-<div class='col-xs-2'>
+<?php }?>
+</div>
+
+
+
+
+
+<div class='col-md-4'>
+
+<?php foreach ($query2 as $key => $empresa) {?>
+
+
+
+
+
+<div class="panel panel-default">
+              <div class="panel-body">
+              <img style=" height: 10%;" src="/logos/<?echo $empresa->logo;?>" class="img-responsive center-block" >
+              </div>
+              <div class="panel-footer" class="center-block" style="text-align:center; height: 16%; background-color: #0C4571">
+                <h5 class='col-md-12'style='color:#FFF;'><?php echo $empresa->nombre_establecimiento; ?> </h5>
+             <form action='index.php/detalles' method='post'> 
+            <h4 style='height: 20%; width: 100%;'> <button  name='valor'class="btn btn-link" type='submit' value='<?echo $empresa->nombre_establecimiento;?>' style="border:solid 0px; color:#fff !important; "> detalles</h4></button>
+             </form>
+              </div>
+</div>
+<?php }?>
+</div>
+<div class='col-md-4'>
+
 	
-	<? $i=4; while($i<=6)
-{
-$empresa='empresa'.$i; 
-?>
+<?php foreach ($query2 as $key => $empresa) {?>
 
 
 <div class="panel panel-default">
               <div class="panel-body">
-                <img style=" height: 10%;" src="http://localhost/Buscame.mx/imagenes/<?echo $$empresa;?>.jpg" class="img-responsive center-block" >
+              <img style=" height: 10%;" src="/logos/<?echo $empresa->logo;?>" class="img-responsive center-block" >
               </div>
-
-              <div class="panel-footer" class="center-block" style="text-align:center;">
-                <h4> <?php echo $$empresa; ?> </h4>
-             
-              
-                 <a href='http://localhost/Buscame.mx/buscame/controllers/<?echo $$empresa;?>.php' method='post'><?php 
-              echo 'ver detalles de '.$$empresa; ?> &nbsp;&nbsp;&nbsp;</a>
+              <div class="panel-footer" class="center-block" style="text-align:center; height: 16%; background-color:#0C4571">
+                <h5 class='col-md-12'style='color:#FFF;'><?php echo $empresa->nombre_establecimiento; ?> </h5>
+             <form action='index.php/detalles' method='post'> 
+            <h4 style='height: 20%; width: 100%;'> <button name='valor' class="btn btn-link" type='submit' value='<?echo $empresa->nombre_establecimiento;?>' style="border:solid 0px;  color:#fff !important;"> detalles</h4></button>
+             </form>
               </div>
 </div>
-<? $i++;}?>
+
+<?}?>
 </div>
 
+
+</div>
+</div>
+
+
+
+
+<div class='col-md-2' >
+<?php foreach ($query3 as $key => $empresa) {?>
+
+
+
+
+
+<div class="panel panel-default">
+              <div class="panel-body">
+              <img style=" height: 10%;" src="/logos/<?echo $empresa->logo;?>" class="img-responsive center-block" >
+              </div>
+              <div class="panel-footer" class="center-block" style="text-align:center; height: 16%; background-color: #0C4571">
+                <h5 class='col-md-12'style='color:#FFF;'><?php echo $empresa->nombre_establecimiento; ?> </h5>
+             <form action='index.php/detalles' method='post'> 
+            <h4 style='height: 20%; width: 100%;'> <button name='valor' class="btn btn-link" type='submit' value='<?echo $empresa->nombre_establecimiento;?>' style="border:solid 0px; color:#fff !important; "> detalles</h4></button>
+             </form>
+              </div>
+</div>
+
+<?php }?>
+</div>

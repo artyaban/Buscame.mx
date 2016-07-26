@@ -26,7 +26,7 @@
   
 
     <!-- Responsive CSS -->
-    <link href="<?echo base_url();?>css/responsiave.css" rel="stylesheet">
+    <link href="<?echo base_url();?>css/responsive.css" rel="stylesheet">
 
 
  <section class="contact" id="CONTACT">

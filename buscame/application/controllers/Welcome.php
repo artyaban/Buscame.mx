@@ -20,12 +20,14 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->model('Inicio','establecimientos',TRUE);
+		$data['query']=$this->establecimientos->get();
+		$data['query2']=$this->establecimientos->get2();
+		$data['query3']=$this->establecimientos->get3();
 		$this->load->view('header');
-		$this->load->view('inicio');
+		$this->load->view('inicio',$data);
 		$this->load->view('footer');
 
-
-		
 	}
 
 	public function ver(){

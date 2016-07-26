@@ -1486,7 +1486,7 @@
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #FF9200 !important;
+			color: #B3B3B3 !important;
 		}
 
 			a:hover:before {
@@ -1727,8 +1727,8 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			box-shadow: inset 0 0 0 1px #2ebaae;
-			color: #2ebaae !important;
+			
+		
 		}
 
 			input[type="submit"]:hover:active,
@@ -1880,16 +1880,13 @@
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		background: rgba(160, 160, 160, 0.075);
-		border: none;
-		border: solid 1px rgba(160, 160, 160, 0.3);
 		border-radius: 0;
 		color: inherit;
 		display: block;
 		outline: 0;
 		padding: 0 1em;
 		text-decoration: none;
-		width: 100%;
+		width: 70%;
 	}
 
 		input[type="text"]:invalid,
@@ -1948,7 +1945,7 @@
 	input[type="password"],
 	input[type="email"],
 	select {
-		height: 2.75em;
+		
 	}
 
 	textarea {
@@ -2942,7 +2939,7 @@
 /* Header */
 
 	body {
-		padding-top: 3.5em;
+		
 	}
 
 	#header {
@@ -2954,7 +2951,7 @@
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background-color: #ffffff;
+		background-color: #0C4571;
 		border-bottom: solid 1px rgba(160, 160, 160, 0.3);
 		height: 3.5em;
 		left: 0;
@@ -3342,7 +3339,7 @@
 		-ms-transition: -ms-transform 0.5s ease, visibility 0.5s;
 		transition: transform 0.5s ease, visibility 0.5s;
 		-webkit-overflow-scrolling: touch;
-		background: #ffffff;
+		background: #3333ff;
 		border-left: solid 1px rgba(160, 160, 160, 0.3);
 		box-shadow: none;
 		height: 100%;
